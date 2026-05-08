@@ -1,9 +1,9 @@
 const nav = document.getElementById('nav');
 const reveals = document.querySelectorAll('.reveal');
-const hasHero = !!document.querySelector('.hero');
+const hasHero = !!document.querySelector('.hero, .page-hero');
 
 window.addEventListener('scroll', () => {
-    const pastHero = window.scrollY > 80;
+    const pastHero = window.scrollY > window.innerHeight * 0.6;
     nav.classList.toggle('scrolled', !hasHero || pastHero);
     nav.classList.toggle('hero-top', hasHero && !pastHero);
 }, { passive: true });
