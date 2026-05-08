@@ -389,9 +389,42 @@ img { display: block; max-width: 100%; }
 /* ─── Page Hero (inner pages) ───────────────────────────────────────────── */
 
 .page-hero {
-    padding: 9rem 2.5rem 4rem;
+    position: relative;
+    height: 55vh;
+    min-height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
     border-bottom: 1px solid var(--border);
-    background: var(--bg);
+}
+
+.page-hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: var(--page-bg);
+    background-size: cover;
+    background-position: center 40%;
+    transform: scale(1.04);
+    animation: zoomOut 10s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.page-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(20,16,12,0.25) 0%,
+        rgba(20,16,12,0.18) 35%,
+        rgba(20,16,12,0.72) 85%,
+        rgba(20,16,12,0.9) 100%
+    );
+}
+
+.page-hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 2.5rem 3.5rem;
 }
 
 .page-eyebrow {
@@ -399,7 +432,7 @@ img { display: block; max-width: 100%; }
     font-size: 0.62rem;
     letter-spacing: 0.26em;
     text-transform: uppercase;
-    color: var(--accent);
+    color: var(--accent3);
     margin-bottom: 1.1rem;
 }
 
@@ -410,7 +443,7 @@ img { display: block; max-width: 100%; }
     font-style: italic;
     line-height: 0.88;
     letter-spacing: -0.015em;
-    color: var(--text);
+    color: #fff;
 }
 
 /* ─── Gallery ───────────────────────────────────────────────────────────── */
@@ -515,7 +548,8 @@ img { display: block; max-width: 100%; }
     .about-inner { grid-template-columns: 1fr; gap: 2rem; }
     .about-facts { grid-column: 1; padding-left: 2rem; }
 
-    .page-hero { padding: 7rem 1.25rem 3rem; }
+    .page-hero { min-height: 280px; }
+    .page-hero-content { padding: 0 1.25rem 2.5rem; }
     .gallery-section { padding: 3rem 1.25rem 4rem; }
     .gallery-grid { columns: 1; }
 

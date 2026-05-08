@@ -1,10 +1,11 @@
 const nav = document.getElementById('nav');
 const reveals = document.querySelectorAll('.reveal');
+const hasHero = !!document.querySelector('.hero');
 
 window.addEventListener('scroll', () => {
     const pastHero = window.scrollY > 80;
-    nav.classList.toggle('scrolled', pastHero);
-    nav.classList.toggle('hero-top', !pastHero);
+    nav.classList.toggle('scrolled', !hasHero || pastHero);
+    nav.classList.toggle('hero-top', hasHero && !pastHero);
 }, { passive: true });
 
 const observer = new IntersectionObserver(
