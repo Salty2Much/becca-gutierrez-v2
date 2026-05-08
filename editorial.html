@@ -29,11 +29,12 @@
         </div>
     </header>
 
-    <section class="gallery-section">
-        <div class="gallery-section-header">
-            <h2 class="subsection-title">WavZine Zine Shoots</h2>
-            <div class="divider"></div>
-        </div>
+    <div class="tab-group" data-group="editorial">
+        <button class="tab-btn active" data-target="wavzine">WavZine Zine Shoots</button>
+        <button class="tab-btn" data-target="kcpr">KCPR Shoots</button>
+    </div>
+
+    <section class="gallery-section" id="wavzine" data-tab-group="editorial">
         <div class="gallery-grid">
             <div class="gallery-item"><img src="images/wavzine/unnamed.jpg" alt="WavZine" loading="lazy"></div>
             <div class="gallery-item"><img src="images/wavzine/unnamed(1).jpg" alt="WavZine" loading="lazy"></div>
@@ -69,11 +70,7 @@
         </div>
     </section>
 
-    <section class="gallery-section">
-        <div class="gallery-section-header">
-            <h2 class="subsection-title">KCPR Shoots</h2>
-            <div class="divider"></div>
-        </div>
+    <section class="gallery-section" id="kcpr" data-tab-group="editorial">
         <div class="gallery-grid">
             <div class="gallery-item"><img src="images/kcpr/unnamed.jpg" alt="KCPR" loading="lazy"></div>
             <div class="gallery-item"><img src="images/kcpr/unnamed(1).jpg" alt="KCPR" loading="lazy"></div>

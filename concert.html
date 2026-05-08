@@ -29,11 +29,12 @@
         </div>
     </header>
 
-    <section class="gallery-section">
-        <div class="gallery-section-header">
-            <h2 class="subsection-title">Shabang 2025</h2>
-            <div class="divider"></div>
-        </div>
+    <div class="tab-group" data-group="concert">
+        <button class="tab-btn active" data-target="shabang">Shabang 2025</button>
+        <button class="tab-btn" data-target="botb">Battle of the Bands 2025</button>
+    </div>
+
+    <section class="gallery-section" id="shabang" data-tab-group="concert">
         <div class="gallery-grid">
             <div class="gallery-item"><img src="images/concert/unnamed.jpg" alt="Shabang 2025" loading="lazy"></div>
             <div class="gallery-item"><img src="images/concert/unnamed(1).jpg" alt="Shabang 2025" loading="lazy"></div>
@@ -64,11 +65,7 @@
             <div class="gallery-item"><img src="images/concert/unnamed(26).jpg" alt="Shabang 2025" loading="lazy"></div>
         </div>
     
-    <section class="gallery-section">
-        <div class="gallery-section-header">
-            <h2 class="subsection-title">Battle of the Bands 2025</h2>
-            <div class="divider"></div>
-        </div>
+    <section class="gallery-section" id="botb" data-tab-group="concert">
         <div class="gallery-grid">
             <div class="gallery-item"><img src="images/botb/unnamed.jpg" alt="Battle of the Bands 2025" loading="lazy"></div>
             <div class="gallery-item"><img src="images/botb/unnamed(1).jpg" alt="Battle of the Bands 2025" loading="lazy"></div>
